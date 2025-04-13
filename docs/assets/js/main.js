@@ -1,43 +1,42 @@
-// Data Module - Scalable content structure
 const rankingsData = {
   movies: [
     {
       rank: 1,
       title: "O Poderoso Chefão",
-      description: "Considerado por muitos o melhor filme de todos os tempos, dirigido por Francis Ford Coppola.",
-      image: "/assets/images/rankings/filmes/poderoso-chefao.jpg",
+      description: "Um épico da máfia dirigido por Francis Ford Coppola, aclamado como um dos maiores filmes da história do cinema.",
+      image: "/assets/img/categorias/poderosochefao.webp",
       category: "Filmes",
       date: "15/04/2025"
     },
     {
       rank: 2,
       title: "Um Sonho de Liberdade",
-      description: "Baseado na obra de Stephen King, um clássico sobre esperança e redenção.",
-      image: "/assets/images/rankings/filmes/sonho-liberdade.jpg",
+      description: "Baseado em obra de Stephen King, este drama poderoso explora amizade, esperança e liberdade dentro de uma prisão.",
+      image: "/assets/img/categorias/umsonhodeliverdade.webp",
       category: "Filmes",
       date: "15/04/2025"
     },
     {
       rank: 3,
-      title: "O Cavaleiro das Trevas",
-      description: "Batman enfrenta o Coringa em um dos melhores filmes de super-herói já feitos.",
-      image: "/assets/images/rankings/filmes/cavaleiro-trevas.jpg",
+      title: "Coringa",
+      description: "Um retrato sombrio e intenso da origem do icônico vilão, com uma performance premiada de Joaquin Phoenix.",
+      image: "/assets/img/categorias/coringa.webp",
       category: "Filmes",
       date: "15/04/2025"
     },
     {
       rank: 4,
-      title: "Pulp Fiction",
-      description: "O icônico filme de Quentin Tarantino que revolucionou o cinema independente.",
-      image: "/assets/images/rankings/filmes/pulp-fiction.jpg",
+      title: "Djongo Livre",
+      description: "Western explosivo de Quentin Tarantino sobre um escravizado em busca de liberdade e justiça no sul dos EUA.",
+      image: "/assets/img/categorias/djangolivre.webp",
       category: "Filmes",
       date: "15/04/2025"
     },
     {
       rank: 5,
-      title: "Forrest Gump",
-      description: "A jornada de um homem simples através de momentos históricos dos EUA.",
-      image: "/assets/images/rankings/filmes/forrest-gump.jpg",
+      title: "O Milagre da Cela 7",
+      description: "Um drama emocionante sobre um pai com deficiência intelectual acusado injustamente e o vínculo com sua filha.",
+      image: "/assets/img/categorias/omilagredacela7.webp",
       category: "Filmes",
       date: "15/04/2025"
     }
@@ -215,7 +214,7 @@ const rankingsData = {
 const categoriesData = [
   {
     title: "Filmes",
-    image: "/assets/images/categories/filmes.jpg",
+    image: "/assets/img/categorias/filme.webp",
     items: [
       "Top 10 Filmes de Todos os Tempos",
       "Melhores Filmes de 2025",
@@ -226,7 +225,7 @@ const categoriesData = [
   },
   {
     title: "Séries",
-    image: "/assets/images/categories/series.jpg",
+    image: "/assets/img/categorias/melhoresseries.webp",
     items: [
       "Top 10 Séries de Todos os Tempos",
       "Melhores Séries de 2025",
@@ -237,7 +236,7 @@ const categoriesData = [
   },
   {
     title: "Tecnologia",
-    image: "/assets/images/categories/tecnologia.jpg",
+    image: "/assets/img/categorias/tecnologia.webp",
     items: [
       "Melhores Celulares de 2025",
       "Top 10 Notebooks",
@@ -248,7 +247,7 @@ const categoriesData = [
   },
   {
     title: "Gastronomia",
-    image: "/assets/images/categories/gastronomia.jpg",
+    image: "/assets/img/categorias/melhoresgastronomia.webp",
     items: [
       "Melhores Restaurantes do Mundo",
       "Top 10 Chefs Internacionais",
@@ -259,7 +258,7 @@ const categoriesData = [
   },
   {
     title: "Viagens",
-    image: "/assets/images/categories/viagens.jpg",
+    image: "/assets/img/categorias/viagens.webp",
     items: [
       "Top 10 Destinos para 2025",
       "Melhores Hotéis de Luxo",
@@ -270,7 +269,7 @@ const categoriesData = [
   },
   {
     title: "Investimentos",
-    image: "/assets/images/categories/investimentos.jpg",
+    image: "/assets/img/categorias/investimento.webp",
     items: [
       "Melhores Ações para 2025",
       "Top 10 Fundos Imobiliários",
