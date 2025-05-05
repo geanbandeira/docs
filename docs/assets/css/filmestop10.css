@@ -1,0 +1,370 @@
+/* Estilos futuristas para 2025 */
+.movie-gallery {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    color: #e0e0e0;
+    font-family: 'Neuropol', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(99, 102, 241, 0.2);
+  }
+  
+  .holographic-title {
+    font-size: 3.5rem;
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    position: relative;
+    animation: hologram-pulse 4s infinite alternate;
+  }
+  
+  .subtitle {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
+  
+  .neuro-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding: 1rem 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .neuro-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .movie-card {
+    scroll-snap-align: center;
+    min-width: 80%;
+    background: rgba(30, 41, 59, 0.7);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    display: flex;
+    gap: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+  
+  .movie-card.active {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 12px 40px rgba(99, 102, 241, 0.3);
+  }
+  
+  .movie-hologram {
+    position: relative;
+    width: 50%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+  }
+  
+  .hologram-content {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16/9;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hologram-light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+      rgba(99, 102, 241, 0.1) 0%, 
+      rgba(236, 72, 153, 0.1) 50%, 
+      rgba(99, 102, 241, 0.1) 100%);
+    animation: hologram-effect 6s infinite alternate;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .movie-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .movie-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #f8fafc;
+    line-height: 1.3;
+  }
+  
+  .movie-info p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .neuro-rating {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .rating-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #8b5cf6;
+  }
+  
+  .neuro-bar {
+    height: 8px;
+    flex-grow: 1;
+    background: rgba(203, 213, 225, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .neuro-bar::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: calc(var(--rating) * 100%);
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    border-radius: 4px;
+    animation: neuro-glow 2s infinite alternate;
+  }
+  
+  .neuro-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+    align-self: flex-start;
+  }
+  
+  .neuro-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
+  }
+  
+  .watch-trailer {
+    margin-top: auto;
+  }
+  
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .neuro-indicators {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .neuro-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(203, 213, 225, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .neuro-indicators button.active {
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    transform: scale(1.2);
+  }
+  
+  .ai-recommendation {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: rgba(15, 23, 42, 0.7);
+    border-radius: 12px;
+    border-left: 4px solid #8b5cf6;
+  }
+  
+  .ai-recommendation h3 {
+    color: #8b5cf6;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ai-recommendation p {
+    color: #cbd5e1;
+    line-height: 1.6;
+  }
+  
+  .ai-suggest {
+    margin-top: 1rem;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid #8b5cf6;
+  }
+  
+  /* Modal VR */
+  .vr-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+  }
+  
+  .vr-container {
+    width: 90%;
+    max-width: 1200px;
+    background: #0f172a;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 50px rgba(139, 92, 246, 0.3);
+    position: relative;
+  }
+  
+  .close-vr {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .vr-player {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #1e293b;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .vr-placeholder {
+    text-align: center;
+    color: #cbd5e1;
+  }
+  
+  .vr-loading {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(139, 92, 246, 0.3);
+    border-top-color: #8b5cf6;
+    border-radius: 50%;
+    margin: 1rem auto;
+    animation: spin 1s linear infinite;
+  }
+  
+  .vr-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  
+  .vr-btn {
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .vr-quality {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #cbd5e1;
+  }
+  
+  .neuro-select {
+    padding: 0.5rem;
+    border-radius: 6px;
+    background: #1e293b;
+    color: white;
+    border: 1px solid #334155;
+  }
+  
+  /* Animações */
+  @keyframes hologram-pulse {
+    0% { text-shadow: 0 0 20px rgba(139, 92, 246, 0.3); }
+    100% { text-shadow: 0 0 30px rgba(236, 72, 153, 0.5); }
+  }
+  
+  @keyframes hologram-effect {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.3; }
+  }
+  
+  @keyframes neuro-glow {
+    0% { box-shadow: 0 0 5px rgba(139, 92, 246, 0.5); }
+    100% { box-shadow: 0 0 15px rgba(236, 72, 153, 0.7); }
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Efeitos responsivos */
+  @media (max-width: 1024px) {
+    .movie-card {
+      flex-direction: column;
+      min-width: 90%;
+    }
+    
+    .movie-hologram, .movie-info {
+      width: 100%;
+    }
+    
+    .holographic-title {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .movie-gallery {
+      padding: 1rem;
+    }
+    
+    .holographic-title {
+      font-size: 2rem;
+    }
+    
+    .movie-card {
+      min-width: 95%;
+      padding: 1rem;
+    }
+  }
