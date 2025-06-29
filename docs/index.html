@@ -1,560 +1,918 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lançamento em 28º de Junho | Os Melhores Rankings</title>
-  <style>
-    /* CSS Variables with Neon Theme */
-    :root {
-      --color-primary: #0ff0fc;
-      --color-secondary: #ff00ff;
-      --color-accent: #00ffaa;
-      --color-bg: #0a0a1a;
-      --color-text: #ffffff;
-      --glow-intensity: 1;
-      
-      --font-main: 'Orbitron', sans-serif;
-      --font-secondary: 'Rajdhani', sans-serif;
-      
-      --particle-size: 2px;
-      --particle-count: 150;
-    }
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Os Melhores Rankings | Ranking Definitivo dos Melhores em Tudo</title>
 
-    /* Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <meta name="description" content="Rankings exclusivos e curados dos melhores produtos, serviços e experiências em todas as categorias. Dados verificados por especialistas e inteligência artificial.">
+  <meta name="keywords" content="rankings premium, melhores avaliações, críticas especializadas, top 10, filmes, séries, tecnologia, viagens, gastronomia, negócios, estilo de vida">
+  <meta name="author" content="Os Melhores Rankings">
 
-    @font-face {
-      font-family: 'Orbitron';
-      src: url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
-    }
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://premium.osmelhoresrankings.com/">
+  <meta property="og:title" content="Os Melhores Rankings Premium | Acesso Exclusivo aos Melhores do Mundo">
+  <meta property="og:description" content="Acesso antecipado aos rankings mais exclusivos e curados. Análises profundas, dados verificados por especialistas e inteligência artificial.">
+  <meta property="og:image" content="https://premium.osmelhoresrankings.com/assets/images/social-share-premium.jpg">
 
-    @font-face {
-      font-family: 'Rajdhani';
-      src: url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&display=swap');
-    }
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://premium.osmelhoresrankings.com/">
+  <meta property="twitter:title" content="Os Melhores Rankings Premium | Acesso Exclusivo aos Melhores do Mundo">
+  <meta property="twitter:description" content="Acesso antecipado aos rankings mais exclusivos e curados. Análises profundas, dados verificados por especialistas e inteligência artificial.">
+  <meta property="twitter:image" content="https://premium.osmelhoresrankings.com/assets/images/social-share-premium.jpg">
 
-    body {
-      font-family: var(--font-secondary);
-      background-color: var(--color-bg);
-      color: var(--color-text);
-      overflow: hidden;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      perspective: 1000px;
-    }
+  <link rel="preload" href="/assets/css/main.css" as="style">
+  <link rel="preload" href="/assets/js/main.js" as="script">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
 
-    /* Main Container */
-    .container {
-      position: relative;
-      z-index: 10;
-      text-align: center;
-      padding: 2rem;
-      background: rgba(10, 10, 26, 0.5);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      border: 1px solid rgba(0, 255, 170, 0.2);
-      box-shadow: 
-        0 0 20px rgba(0, 255, 170, 0.1),
-        0 0 40px rgba(0, 255, 170, 0.05);
-      transform-style: preserve-3d;
-      animation: float 6s ease-in-out infinite;
-    }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(0deg); }
-      50% { transform: translateY(-20px) rotateX(2deg) rotateY(2deg); }
-    }
+  <link rel="stylesheet" href="/assets/css/main.css">
 
-    /* Typography */
-    h1 {
-      font-family: var(--font-main);
-      font-size: clamp(2rem, 5vw, 4rem);
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      background: linear-gradient(90deg, var(--color-primary), var(--color-accent), var(--color-secondary));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      text-shadow: 
-        0 0 10px rgba(0, 255, 255, 0.3),
-        0 0 20px rgba(0, 255, 170, 0.2);
-      animation: textGlow 3s alternate infinite;
-    }
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
 
-    @keyframes textGlow {
-      to {
-        text-shadow: 
-          0 0 15px rgba(0, 255, 255, 0.5),
-          0 0 30px rgba(0, 255, 170, 0.3);
-      }
-    }
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      max-width: 600px;
-      line-height: 1.6;
-    }
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-    .highlight {
-      color: var(--color-accent);
-      font-weight: 700;
-    }
-
-    /* Countdown */
-    .countdown {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 3rem 0;
-      flex-wrap: wrap;
-    }
-
-    .countdown-item {
-      position: relative;
-      width: 100px;
-      height: 100px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: rgba(0, 255, 170, 0.05);
-      border-radius: 15px;
-      border: 1px solid rgba(0, 255, 170, 0.1);
-      box-shadow: 
-        0 0 15px rgba(0, 255, 170, 0.1),
-        inset 0 0 10px rgba(0, 255, 170, 0.05);
-      transform-style: preserve-3d;
-      transition: all 0.3s ease;
-    }
-
-    .countdown-item:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 
-        0 0 25px rgba(0, 255, 170, 0.2),
-        inset 0 0 15px rgba(0, 255, 170, 0.1);
-    }
-
-    .countdown-number {
-      font-family: var(--font-main);
-      font-size: 2.5rem;
-      font-weight: 700;
-      background: linear-gradient(180deg, var(--color-primary), var(--color-accent));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .countdown-label {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-top: 0.5rem;
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    /* Interactive Elements */
-    .cta-button {
-      display: inline-block;
-      padding: 1rem 2rem;
-      font-family: var(--font-main);
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
-      color: var(--color-bg);
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-      transition: all 0.3s ease;
-      box-shadow: 
-        0 0 15px rgba(0, 255, 255, 0.3),
-        0 0 30px rgba(0, 255, 170, 0.2);
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 
-        0 0 25px rgba(0, 255, 255, 0.5),
-        0 0 40px rgba(0, 255, 170, 0.3);
-    }
-
-    .cta-button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, var(--color-accent), var(--color-secondary));
-      z-index: -1;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .cta-button:hover::before {
-      opacity: 1;
-    }
-
-    /* Particles Background */
-    .particles {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    .particle {
-      position: absolute;
-      width: var(--particle-size);
-      height: var(--particle-size);
-      background: var(--color-primary);
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: floatParticle linear infinite;
-    }
-
-    @keyframes floatParticle {
-      0% {
-        transform: translateY(0) translateX(0);
-        opacity: 0;
-      }
-      10% {
-        opacity: 0.8;
-      }
-      90% {
-        opacity: 0.8;
-      }
-      100% {
-        transform: translateY(-100vh) translateX(calc(var(--random-x) * 100px));
-        opacity: 0;
-      }
-    }
-
-    /* Glow Effects */
-    .glow {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(40px);
-      opacity: 0.3;
-      z-index: 0;
-    }
-
-    .glow-1 {
-      width: 300px;
-      height: 300px;
-      background: var(--color-primary);
-      top: -100px;
-      left: -100px;
-      animation: pulseGlow 4s ease-in-out infinite alternate;
-    }
-
-    .glow-2 {
-      width: 400px;
-      height: 400px;
-      background: var(--color-secondary);
-      bottom: -150px;
-      right: -100px;
-      animation: pulseGlow 5s ease-in-out infinite alternate-reverse;
-    }
-
-    @keyframes pulseGlow {
-      to {
-        transform: scale(1.2);
-        opacity: 0.5;
-      }
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      :root {
-        --particle-count: 80;
-      }
-
-      .countdown {
-        gap: 1rem;
-      }
-
-      .countdown-item {
-        width: 80px;
-        height: 80px;
-      }
-
-      .countdown-number {
-        font-size: 2rem;
-      }
-    }
-
-    /* 3D Tilt Effect */
-    .tilt-effect {
-      transition: transform 0.1s ease-out;
-    }
-  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
+
 <body>
-  <!-- Glow Effects -->
-  <div class="glow glow-1"></div>
-  <div class="glow glow-2"></div>
+  <canvas id="3d-background" class="background-canvas"></canvas>
 
-  <!-- Particles Background -->
-  <div class="particles" id="particles"></div>
+  <div class="preloader">
+    <div class="preloader-content">
+      <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_usmfx6bp.json" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+      <div class="preloader-text">
+        <span class="loading-text">Carregando experiência premium</span>
+        <span class="loading-dots"></span>
+      </div>
+    </div>
+  </div>
 
-  <!-- Main Content -->
-  <div class="container tilt-effect" id="tiltContainer">
-    <h1>Lançamento em Breve!</h1>
-    <p>Estamos preparando algo <span class="highlight">incrível</span> para você. O novo <span class="highlight">Os Melhores Rankings</span> será lançado em:</p>
-    
-    <div class="countdown">
-      <div class="countdown-item">
-        <div class="countdown-number" id="days">00</div>
-        <div class="countdown-label">Dias</div>
+  <div class="floating-nav">
+    <button class="floating-nav-btn theme-toggle" aria-label="Alternar tema">
+      <i class="fas fa-moon"></i>
+    </button>
+    <button class="floating-nav-btn search-toggle" aria-label="Abrir busca">
+      <i class="fas fa-search"></i>
+    </button>
+    <button class="floating-nav-btn scroll-top" aria-label="Voltar ao topo">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <header class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <a href="/" class="brand-logo" aria-label="Os Melhores Rankings - Página Inicial">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" />
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-main">Os Melhores Rankings</span>
+            <span class="logo-sub">Análises e Comparativos</span>
+          </div>
+        </a>
+
+        <nav class="nav-container" aria-label="Navegação principal">
+          <ul class="nav-list">
+            <li class="nav-item mega-menu">
+              <button class="nav-link" aria-expanded="false" aria-controls="entertainment-menu">
+                <span>Entretenimento</span>
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+                <span class="hover-effect"></span>
+              </button>
+              <div class="mega-menu-content" id="entertainment-menu">
+                <div class="mega-menu-grid">
+                  <div class="mega-menu-column">
+                    <h3 class="mega-menu-title">Cinema & TV</h3>
+                    <ul class="mega-menu-links">
+                      <li><a href="#" class="mega-menu-link">Últimos Lançamentos</a></li>
+                      <li><a href="#" class="mega-menu-link">Séries em Destaque</a></li>
+                      <li><a href="#" class="mega-menu-link">Críticas e Análises</a></li>
+                      <li><a href="#" class="mega-menu-link">Clássicos do Cinema</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-column">
+                    <h3 class="mega-menu-title">Música</h3>
+                    <ul class="mega-menu-links">
+                      <li><a href="#" class="mega-menu-link">Novos Álbuns</a></li>
+                      <li><a href="#" class="mega-menu-link">Playlists Curadas</a></li>
+                      <li><a href="#" class="mega-menu-link">Festivais 2025</a></li>
+                      <li><a href="#" class="mega-menu-link">Artistas em Ascensão</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-column">
+                    <h3 class="mega-menu-title">Games</h3>
+                    <ul class="mega-menu-links">
+                      <li><a href="#" class="mega-menu-link">Lançamentos 2025</a></li>
+                      <li><a href="#" class="mega-menu-link">Melhores para PC/Console</a></li>
+                      <li><a href="#" class="mega-menu-link">Dicas e Truques</a></li>
+                      <li><a href="#" class="mega-menu-link">Reviews de Hardware</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-column promo-column">
+                    <div class="mega-menu-promo entertainment-promo">
+                      <h3>Eventos Exclusivos</h3>
+                      <p>Acesso antecipado a pré-estreias para assinantes Premium.</p>
+                      <a href="/premium" class="promo-button">Upgrade Premium</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item mega-menu">
+              <button class="nav-link" aria-expanded="false" aria-controls="tech-menu">
+                <span>Tecnologia</span>
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+                <span class="hover-effect"></span>
+              </button>
+              <div class="mega-menu-content" id="tech-menu">
+                <div class="mega-menu-grid">
+                  <div class="mega-menu-column">
+                    <h3 class="mega-menu-title">Inovações</h3>
+                    <ul class="mega-menu-links">
+                      <li><a href="#" class="mega-menu-link">IA Generativa</a></li>
+                      <li><a href="#" class="mega-menu-link">Realidade Extendida (XR)</a></li>
+                      <li><a href="#" class="mega-menu-link">Robótica Avançada</a></li>
+                      <li><a href="#" class="mega-menu-link">Computação Quântica</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-column">
+                    <h3 class="mega-menu-title">Gadgets</h3>
+                    <ul class="mega-menu-links">
+                      <li><a href="#" class="mega-menu-link">Smartphones 2025</a></li>
+                      <li><a href="#" class="mega-menu-link">Wearables Inteligentes</a></li>
+                      <li><a href="#" class="mega-menu-link">Dispositivos IoT</a></li>
+                      <li><a href="#" class="mega-menu-link">Drones e Câmeras</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-column promo-column">
+                    <div class="mega-menu-promo tech-promo">
+                      <h3>Tech Insider</h3>
+                      <p>Acesso exclusivo a análises técnicas e benchmarks detalhados.</p>
+                      <a href="/premium" class="promo-button">Assine Agora</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item mega-menu">
+              <button class="nav-link" aria-expanded="false" aria-controls="lifestyle-menu">
+                <span>Estilo de Vida</span>
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+                <span class="hover-effect"></span>
+              </button>
+              <div class="mega-menu-content" id="lifestyle-menu">
+                <div class="mega-menu-grid">
+                  <div class="mega-menu-column">
+                    <h3 class="mega-menu-title">Viagem</h3>
+                    <ul class="mega-menu-links">
+                      <li><a href="#" class="mega-menu-link">Destinos Top 2025</a></li>
+                      <li><a href="#" class="mega-menu-link">Hotéis Mais Bem Avaliados</a></li>
+                      <li><a href="#" class="mega-menu-link">Roteiros de Luxo</a></li>
+                      <li><a href="#" class="mega-menu-link">Viagens Sustentáveis</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-column">
+                    <h3 class="mega-menu-title">Gastronomia</h3>
+                    <ul class="mega-menu-links">
+                      <li><a href="#" class="mega-menu-link">Melhores Restaurantes</a></li>
+                      <li><a href="#" class="mega-menu-link">Receitas Virais</a></li>
+                      <li><a href="#" class="mega-menu-link">Ranking de Chefs</a></li>
+                      <li><a href="#" class="mega-menu-link">Vinhos e Destilados</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-column promo-column">
+                    <div class="mega-menu-promo lifestyle-promo">
+                      <h3>Experiências Únicas</h3>
+                      <p>Convites para degustações e eventos de viagem exclusivos.</p>
+                      <a href="/premium" class="promo-button">Seja Premium</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item premium-item">
+              <a href="/premium" class="nav-link premium-tag">
+                <span>Premium</span>
+                <i class="fas fa-crown premium-icon"></i>
+                <span class="premium-glow"></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="search-toggle" aria-label="Abrir busca">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="theme-toggle" aria-label="Alternar tema">
+            <span class="theme-icon light-icon"><i class="fas fa-sun"></i></span>
+            <span class="theme-icon dark-icon"><i class="fas fa-moon"></i></span>
+          </button>
+          <button class="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+        </div>
+
+        <div class="mobile-overlay"></div>
       </div>
-      <div class="countdown-item">
-        <div class="countdown-number" id="hours">00</div>
-        <div class="countdown-label">Horas</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-container container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="title-line">Descubra os</span>
+            <span class="title-line highlight">Melhores Rankings</span>
+            <span class="title-line">do Mundo</span>
+          </h1>
+          <p class="hero-subtitle">Avaliações exclusivas e curadas por especialistas e inteligência artificial para decisões mais inteligentes.</p>
+          <div class="hero-actions">
+            <a href="#featured-rankings" class="btn btn-primary" data-cursor-effect="hover">
+              <span>Explorar Rankings</span>
+              <i class="fas fa-chevron-right"></i>
+            </a>
+            <a href="/premium" class="btn btn-outline" data-cursor-effect="hover">
+              <span>Assinar Premium</span>
+              <i class="fas fa-crown"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="floating-cards">
+            <div class="card-item card-1">
+              <div class="card-rank">1</div>
+              <div class="card-content">
+                <h3>Melhores Filmes 2025</h3>
+                <p>As obras-primas do cinema que definem o ano.</p>
+              </div>
+            </div>
+            <div class="card-item card-2">
+              <div class="card-rank">2</div>
+              <div class="card-content">
+                <h3>Top Restaurantes</h3>
+                <p>Experiências gastronômicas inesquecíveis.</p>
+              </div>
+            </div>
+            <div class="card-item card-3">
+              <div class="card-rank">3</div>
+              <div class="card-content">
+                <h3>Tecnologia Premium</h3>
+                <p>Os gadgets mais inovadores e desejados.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="countdown-item">
-        <div class="countdown-number" id="minutes">00</div>
-        <div class="countdown-label">Minutos</div>
+
+      <div class="hero-scroll-indicator">
+        <span>Role para explorar</span>
+        <div class="scroll-line"></div>
       </div>
-      <div class="countdown-item">
-        <div class="countdown-number" id="seconds">00</div>
-        <div class="countdown-label">Segundos</div>
+    </section>
+
+    <section class="featured-rankings" id="featured-rankings">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="title-decorator"></span>
+        Rankings em Destaque
+      </h2>
+      <p class="section-subtitle">Seleções exclusivas curadas por nossos especialistas em diversas categorias.</p>
+    </div>
+
+    <div class="rankings-tabs">
+      <button class="tab-btn active" data-tab="movies" aria-controls="movies-tab">Filmes & Séries</button>
+      <button class="tab-btn" data-tab="tech" aria-controls="tech-tab">Tecnologia</button>
+      <button class="tab-btn" data-tab="lifestyle" aria-controls="lifestyle-tab">Estilo de Vida</button>
+      <button class="tab-btn" data-tab="business" aria-controls="business-tab">Negócios</button>
+    </div>
+
+    <div class="tab-content active" id="movies-tab" role="tabpanel">
+      <div class="rankings-grid">
+        <article class="ranking-card">
+          <div class="ranking-image">
+            <img src="https://images.unsplash.com/photo-1574267432553-4b4628081c31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEyfHxtb3ZpZXxlbnwwfHx8fDE2Mzc2NDI0Mzk&ixlib=rb-1.2.1&q=80&w=600" alt="Cena de um filme de ficção científica">
+            <div class="ranking-badge premium-badge">Premium</div>
+          </div>
+          <div class="ranking-content">
+            <p class="ranking-category">Cinema</p>
+            <h3 class="ranking-title">Top 10 Sci-Fi de Todos os Tempos</h3>
+            <p class="ranking-description">Uma viagem pelas galáxias com os filmes que redefiniram a ficção científica.</p>
+            <div class="ranking-meta">
+              <span><i class="fas fa-calendar-alt"></i> Atualizado em 10/06/2025</span>
+              <a href="#" class="ranking-link" aria-label="Ver ranking de Top 10 Sci-Fi">Ver Ranking <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="ranking-card">
+          <div class="ranking-image">
+            <img src="https://images.unsplash.com/photo-1627873649417-c67f701f1949?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDV8fHR2JTIwc2VyaWVzfGVufDB8fHx8MTYyNzY0MjQzOQ&ixlib=rb-1.2.1&q=80&w=600" alt="Personagens de uma série de drama">
+            <div class="ranking-badge new-badge">Novo</div>
+          </div>
+          <div class="ranking-content">
+            <p class="ranking-category">Séries</p>
+            <h3 class="ranking-title">As Séries Mais Viciantes de 2025</h3>
+            <p class="ranking-description">Prepare a pipoca! Essas são as séries que você não conseguirá parar de assistir.</p>
+            <div class="ranking-meta">
+              <span><i class="fas fa-calendar-alt"></i> Atualizado em 14/06/2025</span>
+              <a href="#" class="ranking-link" aria-label="Ver ranking de Séries Viciantes">Ver Ranking <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="ranking-card">
+          <div class="ranking-image">
+            <img src="https://images.unsplash.com/photo-1512149177596-f817c7ef5d4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGFuaW1hdGlvbnxlbnwwfHx8fDE2Mzc2NDI0Mzk&ixlib=rb-1.2.1&q=80&w=600" alt="Animação japonesa colorida">
+            <div class="ranking-badge premium-badge">Premium</div>
+          </div>
+          <div class="ranking-content">
+            <p class="ranking-category">Animação</p>
+            <h3 class="ranking-title">Melhores Animes da Década</h3>
+            <p class="ranking-description">Dos shonens épicos aos slice-of-life emocionantes, os animes que marcaram época.</p>
+            <div class="ranking-meta">
+              <span><i class="fas fa-calendar-alt"></i> Atualizado em 01/06/2025</span>
+              <a href="#" class="ranking-link" aria-label="Ver ranking de Melhores Animes">Ver Ranking <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
 
-    <p>Prepare-se para a melhor experiência em rankings do mundo!</p>
-    <button class="cta-button" id="notifyBtn">ME AVISE DO LANÇAMENTO</button>
+    <div class="tab-content" id="tech-tab" role="tabpanel" hidden>
+      <div class="rankings-grid">
+        <article class="ranking-card">
+          <div class="ranking-image">
+            <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Smartphone moderno com tela brilhante">
+            <div class="ranking-badge premium-badge">Premium</div>
+          </div>
+          <div class="ranking-content">
+            <p class="ranking-category">Gadgets</p>
+            <h3 class="ranking-title">Top 15 Smartphones de 2025</h3>
+            <p class="ranking-description">Análise detalhada dos melhores dispositivos móveis do ano, com testes reais.</p>
+            <div class="ranking-meta">
+              <span><i class="fas fa-calendar-alt"></i> Atualizado em 11/06/2025</span>
+              <a href="#" class="ranking-link" aria-label="Ver ranking de Smartphones">Ver Ranking <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="ranking-card">
+          <div class="ranking-image">
+            <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Notebook gamer com teclado iluminado">
+            <div class="ranking-badge new-badge">Novo</div>
+          </div>
+          <div class="ranking-content">
+            <p class="ranking-category">Hardware</p>
+            <h3 class="ranking-title">Notebooks Mais Potentes para Gamers</h3>
+            <p class="ranking-description">Desempenho máximo para rodar os jogos mais exigentes de 2025 sem travamentos.</p>
+            <div class="ranking-meta">
+              <span><i class="fas fa-calendar-alt"></i> Atualizado em 05/06/2025</span>
+              <a href="#" class="ranking-link" aria-label="Ver ranking de Notebooks Gamers">Ver Ranking <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="ranking-card">
+          <div class="ranking-image">
+            <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Fones de ouvido premium">
+            <div class="ranking-badge premium-badge">Premium</div>
+          </div>
+          <div class="ranking-content">
+            <p class="ranking-category">Áudio</p>
+            <h3 class="ranking-title">Melhores Fones de Ouvido em 2025</h3>
+            <p class="ranking-description">Do cancelamento de ruído à qualidade sonora, os melhores fones para cada necessidade.</p>
+            <div class="ranking-meta">
+              <span><i class="fas fa-calendar-alt"></i> Atualizado em 08/06/2025</span>
+              <a href="#" class="ranking-link" aria-label="Ver ranking de Fones de Ouvido">Ver Ranking <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="tab-content" id="lifestyle-tab" role="tabpanel" hidden>
+      <div class="rankings-grid">
+        <article class="ranking-card">
+          <div class="ranking-image">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760c0341?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Torre Eiffel em Paris ao pôr do sol">
+            <div class="ranking-badge new-badge">Novo</div>
+          </div>
+          <div class="ranking-content">
+            <p class="ranking-category">Viagem</p>
+            <h3 class="ranking-title">Top 10 Destinos Europeus para 2025</h3>
+            <p class="ranking-description">De cidades históricas a paisagens naturais, os lugares para sua próxima aventura.</p>
+            <div class="ranking-meta">
+              <span><i class="fas fa-calendar-alt"></i> Atualizado em 13/06/2025</span>
+              <a href="#" class="ranking-link" aria-label="Ver ranking de Destinos Europeus">Ver Ranking <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="ranking-card">
+          <div class="ranking-image">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Prato gourmet servido em um restaurante">
+            <div class="ranking-badge premium-badge">Premium</div>
+          </div>
+          <div class="ranking-content">
+            <p class="ranking-category">Gastronomia</p>
+            <h3 class="ranking-title">Top 15 Restaurantes no Brasil</h3>
+            <p class="ranking-description">A excelência da alta gastronomia nacional reconhecida por especialistas.</p>
+            <div class="ranking-meta">
+              <span><i class="fas fa-calendar-alt"></i> Atualizado em 08/06/2025</span>
+              <a href="#" class="ranking-link" aria-label="Ver ranking de Restaurantes">Ver Ranking <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="ranking-card">
+          <div class="ranking-image">
+            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Carro esportivo luxuoso">
+            <div class="ranking-badge new-badge">Novo</div>
+          </div>
+          <div class="ranking-content">
+            <p class="ranking-category">Automóveis</p>
+            <h3 class="ranking-title">Melhores Carros do Ano</h3>
+            <p class="ranking-description">Desempenho, conforto e tecnologia: os veículos que se destacaram em 2025.</p>
+            <div class="ranking-meta">
+              <span><i class="fas fa-calendar-alt"></i> Atualizado em 15/06/2025</span>
+              <a href="#" class="ranking-link" aria-label="Ver ranking de Carros">Ver Ranking <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="tab-content" id="business-tab" role="tabpanel" hidden>
+      <div class="rankings-grid">
+        <article class="ranking-card">
+          <div class="ranking-image">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Gráficos de negócios em um laptop">
+            <div class="ranking-badge premium-badge">Premium</div>
+          </div>
+          <div class="ranking-content">
+            <p class="ranking-category">Finanças</p>
+            <h3 class="ranking-title">Top 10 Ações para Investir em 2025</h3>
+            <p class="ranking-description">Análise de especialistas sobre as empresas com maior potencial de valorização.</p>
+            <div class="ranking-meta">
+              <span><i class="fas fa-calendar-alt"></i> Atualizado em 12/06/2025</span>
+              <a href="#" class="ranking-link" aria-label="Ver ranking de Ações">Ver Ranking <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="ranking-card">
+          <div class="ranking-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Startup moderna com equipe jovem">
+            <div class="ranking-badge new-badge">Novo</div>
+          </div>
+          <div class="ranking-content">
+            <p class="ranking-category">Empreendedorismo</p>
+            <h3 class="ranking-title">Startups Brasileiras para Ficar de Olho</h3>
+            <p class="ranking-description">As empresas inovadoras que estão revolucionando mercados em 2025.</p>
+            <div class="ranking-meta">
+              <span><i class="fas fa-calendar-alt"></i> Atualizado em 09/06/2025</span>
+              <a href="#" class="ranking-link" aria-label="Ver ranking de Startups">Ver Ranking <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+        
+        <article class="ranking-card">
+          <div class="ranking-image">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Escritório moderno com vista para cidade">
+            <div class="ranking-badge premium-badge">Premium</div>
+          </div>
+          <div class="ranking-content">
+            <p class="ranking-category">Carreira</p>
+            <h3 class="ranking-title">Melhores Empresas para Trabalhar</h3>
+            <p class="ranking-description">As companhias que oferecem os melhores benefícios e ambientes de trabalho.</p>
+            <div class="ranking-meta">
+              <span><i class="fas fa-calendar-alt"></i> Atualizado em 07/06/2025</span>
+              <a href="#" class="ranking-link" aria-label="Ver ranking de Empresas">Ver Ranking <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="section-footer">
+      <a href="/rankings" class="btn btn-outline" data-cursor-effect="hover">
+        <span>Explorar Todos os Rankings</span>
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+    <section class="premium-experience">
+      <div class="container">
+        <div class="premium-content">
+          <div class="premium-text">
+            <h2 class="section-title">
+              <span class="title-decorator"></span>
+              Experiência <span class="highlight">Premium</span>
+            </h2>
+            <p class="section-subtitle">Eleve suas decisões a um novo patamar com acesso exclusivo aos rankings mais completos e atualizados.</p>
+
+            <ul class="premium-features">
+              <li class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-crown"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Acesso Antecipado e Ilimitado</h3>
+                  <p>Seja o primeiro a ver nossos rankings e tenha acesso a todo o nosso acervo sem restrições.</p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Dados Exclusivos e Análises Profundas</h3>
+                  <p>Mergulhe em métricas detalhadas, comparações interativas e análises aprofundadas.</p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Consultoria Especializada</h3>
+                  <p>Tenha acesso direto aos nossos especialistas para tirar dúvidas e receber recomendações.</p>
+                </div>
+              </li>
+            </ul>
+
+            <a href="/premium" class="btn btn-primary" data-cursor-effect="hover">
+              <span>Assine Agora por R$19,90/mês</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="premium-visual">
+            <div class="visual-container">
+              <div class="visual-card card-1">
+                <div class="card-content">
+                  <h3>Ranking Exclusivo</h3>
+                  <p>Os 10 melhores filmes segundo críticos premiados.</p>
+                  <div class="card-badge">Premium</div>
+                </div>
+              </div>
+              <div class="visual-card card-2">
+                <div class="card-content">
+                  <h3>Análise Detalhada</h3>
+                  <p>Comparativo técnico dos melhores smartphones.</p>
+                  <div class="card-badge">Premium</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="methodology-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-decorator"></span>
+            Nossa <span class="highlight">Metodologia</span>
+          </h2>
+          <p class="section-subtitle">Transparência e rigor científico são a base de cada ranking que publicamos.</p>
+        </div>
+
+        <div class="methodology-steps">
+          <div class="methodology-step">
+            <div class="step-icon"><i class="fas fa-database"></i></div>
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3>Coleta de Dados Massiva</h3>
+              <p>Utilizamos fontes confiáveis, milhões de avaliações de usuários e IA para coletar milhares de pontos de dados.</p>
+            </div>
+          </div>
+
+          <div class="methodology-step">
+            <div class="step-icon"><i class="fas fa-robot"></i></div>
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3>Análise Quantitativa</h3>
+              <p>Algoritmos avançados processam e comparam métricas objetivas para criar rankings preliminares e imparciais.</p>
+            </div>
+          </div>
+
+          <div class="methodology-step">
+            <div class="step-icon"><i class="fas fa-user-check"></i></div>
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3>Avaliação Qualitativa</h3>
+              <p>Nossa equipe de especialistas revisa cada item, aplicando critérios subjetivos e experiência de campo.</p>
+            </div>
+          </div>
+
+          <div class="methodology-step">
+            <div class="step-icon"><i class="fas fa-stamp"></i></div>
+            <div class="step-number">04</div>
+            <div class="step-content">
+              <h3>Verificação Final e Publicação</h3>
+              <p>O comitê editorial realiza a última revisão para garantir precisão, imparcialidade e clareza antes da publicação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="expert-reviews">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-decorator"></span>
+            Análises de <span class="highlight">Especialistas</span>
+          </h2>
+          <p class="section-subtitle">Conheça nossos críticos e suas avaliações mais recentes e aprofundadas.</p>
+        </div>
+
+        <div class="experts-grid">
+          <div class="expert-card">
+            <div class="expert-image">
+              <img src="/assets/images/experts/expert-1.jpg" alt="Ana Beatriz - Crítica de Cinema">
+              <div class="expert-badge">
+                <i class="fas fa-film"></i>
+              </div>
+            </div>
+            <div class="expert-content">
+              <h3>Ana Beatriz</h3>
+              <p class="expert-title">Crítica de Cinema</p>
+              <p class="expert-bio">Com 15 anos de experiência, já cobriu os principais festivais de cinema do mundo, como Cannes e Veneza.</p>
+              <a href="/experts/ana-beatriz" class="expert-link">
+                <span>Ver Análises</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="expert-card">
+            <div class="expert-image">
+              <img src="/assets/images/experts/expert-2.jpg" alt="Carlos Mendes - Analista de Tecnologia">
+              <div class="expert-badge">
+                <i class="fas fa-microchip"></i>
+              </div>
+            </div>
+            <div class="expert-content">
+              <h3>Carlos Mendes</h3>
+              <p class="expert-title">Analista de Tecnologia</p>
+              <p class="expert-bio">Engenheiro com especialização em avaliação de produtos eletrônicos e tendências de mercado.</p>
+              <a href="/experts/carlos-mendes" class="expert-link">
+                <span>Ver Análises</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="expert-card">
+            <div class="expert-image">
+              <img src="/assets/images/experts/expert-3.jpg" alt="Mariana Silva - Crítica Gastronômica">
+              <div class="expert-badge">
+                <i class="fas fa-utensils"></i>
+              </div>
+            </div>
+            <div class="expert-content">
+              <h3>Mariana Silva</h3>
+              <p class="expert-title">Crítica Gastronômica</p>
+              <p class="expert-bio">Já avaliou mais de 1.000 restaurantes em 30 países diferentes, buscando a perfeição em cada prato.</p>
+              <a href="/experts/mariana-silva" class="expert-link">
+                <span>Ver Análises</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-decorator"></span>
+                    O que os <span class="highlight">Assinantes</span> Dizem
+                </h2>
+                <p class="section-subtitle">A confiança de nossos assinantes Premium é nossa maior conquista.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de João P.">
+                        <div class="author-info">
+                            <h4>João P.</h4>
+                            <span>Assinante Premium</span>
+                        </div>
+                    </div>
+                    <p class="testimonial-quote">"Os rankings de tecnologia são incrivelmente detalhados. Me ajudaram a escolher meu novo notebook e economizei muito! Vale cada centavo."</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto de Carla S.">
+                        <div class="author-info">
+                            <h4>Carla S.</h4>
+                            <span>Assinante Premium</span>
+                        </div>
+                    </div>
+                    <p class="testimonial-quote">"Uso o site toda semana para decidir o filme do finde. As críticas são honestas e o acesso antecipado aos rankings de séries é o melhor benefício!"</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                 <div class="testimonial-card">
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Foto de Marcos L.">
+                        <div class="author-info">
+                            <h4>Marcos L.</h4>
+                            <span>Assinante Premium</span>
+                        </div>
+                    </div>
+                    <p class="testimonial-quote">"As análises de restaurantes me levaram a lugares que eu nunca conheceria. A curadoria é impecável e as dicas são sempre certeiras."</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-download">
+      <div class="container">
+        <div class="app-content">
+          <div class="app-text">
+            <h2 class="section-title">
+              <span class="title-decorator"></span>
+              Baixe nosso <span class="highlight">App Premium</span>
+            </h2>
+            <p class="section-subtitle">Acesse todos os rankings na palma da sua mão com uma experiência personalizada e offline.</p>
+
+            <div class="app-features">
+              <div class="feature-item">
+                <i class="fas fa-bell"></i>
+                <span>Notificações de novos rankings</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-bookmark"></i>
+                <span>Salve seus rankings favoritos</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-sync-alt"></i>
+                <span>Sincronização entre dispositivos</span>
+              </div>
+            </div>
+
+            <div class="app-buttons">
+              <a href="#" class="app-btn app-store" aria-label="Baixar na App Store">
+                <i class="fab fa-apple"></i>
+                <div class="btn-text">
+                  <span>Disponível na</span>
+                  <strong>App Store</strong>
+                </div>
+              </a>
+              <a href="#" class="app-btn google-play" aria-label="Disponível no Google Play">
+                <i class="fab fa-google-play"></i>
+                <div class="btn-text">
+                  <span>Disponível no</span>
+                  <strong>Google Play</strong>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="app-visual">
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <img src="/assets/images/app-screen.jpg" alt="Tela do aplicativo Os Melhores Rankings">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <a href="/" class="footer-logo">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            <span>Os Melhores Rankings</span>
+          </a>
+          <p>A fonte definitiva para rankings verificados e análises especializadas, ajudando você a fazer as melhores escolhas em todas as categorias.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Categorias</h3>
+          <ul>
+            <li><a href="/entretenimento">Entretenimento</a></li>
+            <li><a href="/tecnologia">Tecnologia</a></li>
+            <li><a href="/estilo-de-vida">Estilo de Vida</a></li>
+            <li><a href="/negocios">Negócios</a></li>
+            <li><a href="/esportes">Esportes</a></li>
+            <li><a href="/ciencia">Ciência</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Sobre</h3>
+          <ul>
+            <li><a href="/sobre">Sobre Nós</a></li>
+            <li><a href="/metodologia">Nossa Metodologia</a></li>
+            <li><a href="/contato">Contato</a></li>
+            <li><a href="/parceiros">Parceiros</a></li>
+            <li><a href="/carreiras">Carreiras</a></li>
+            <li><a href="/imprensa">Imprensa</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contato</h3>
+          <ul class="contact-info">
+            <li><i class="fas fa-envelope"></i><a href="mailto:contato@osmelhoresrankings.com">contato@osmelhoresrankings.com</a></li>
+            <li><i class="fas fa-phone"></i><a href="tel:+5511987654321">(11) 98765-4321</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2025</span> Os Melhores Rankings. Todos os direitos reservados.</p>
+        <div class="legal-links">
+          <a href="/politica-de-privacidade">Política de Privacidade</a>
+          <a href="/termos-de-uso">Termos de Uso</a>
+          <a href="/politica-de-cookies">Política de Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="search-overlay" aria-hidden="true">
+    <div class="search-container">
+      <button class="search-close" aria-label="Fechar busca">
+        <i class="fas fa-times"></i>
+      </button>
+      <form class="search-form" role="search">
+        <input type="search" placeholder="Pesquise rankings, categorias, produtos..." aria-label="Pesquisar no site">
+        <button type="submit" aria-label="Pesquisar">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <div class="search-suggestions">
+        <h3>Sugestões Populares</h3>
+        <div class="suggestion-tags">
+          <a href="/filmes/top-10-todos-os-tempos">Filmes Clássicos</a>
+          <a href="/celulares/melhores-2025">Celulares 2025</a>
+          <a href="/viagens/melhores-destinos">Destinos de Viagem</a>
+          <a href="/gastronomia/restaurantes">Restaurantes Michelin</a>
+          <a href="/investimentos/acoes">Ações para Investir</a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <script>
-    // Modern JavaScript with ES2025 features
-    document.addEventListener('DOMContentLoaded', () => {
-      // Create particles
-      const particlesContainer = document.getElementById('particles');
-      const particleCount = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--particle-count'));
-      
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-        
-        // Random properties
-        const size = Math.random() * 3 + 1;
-        const posX = Math.random() * 100;
-        const posY = Math.random() * 100 + 100;
-        const duration = Math.random() * 20 + 10;
-        const delay = Math.random() * 5;
-        
-        // Set CSS variables
-        particle.style.cssText = `
-          --particle-size: ${size}px;
-          --random-x: ${Math.random() * 2 - 1};
-          left: ${posX}%;
-          top: ${posY}%;
-          animation-duration: ${duration}s;
-          animation-delay: ${delay}s;
-          background: hsl(${Math.random() * 60 + 180}, 100%, 70%);
-        `;
-        
-        particlesContainer.appendChild(particle);
-      }
+  <div class="cursor cursor-normal"></div>
+  <div class="cursor cursor-follower"></div>
 
-      // Countdown to June 1st
-      const launchDate = new Date('June 29, 2025 00:00:00').getTime();
-      
-      const updateCountdown = () => {
-        const now = new Date().getTime();
-        const distance = launchDate - now;
-        
-        if (distance < 0) {
-          document.getElementById('days').textContent = '00';
-          document.getElementById('hours').textContent = '00';
-          document.getElementById('minutes').textContent = '00';
-          document.getElementById('seconds').textContent = '00';
-          return;
-        }
-        
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-        document.getElementById('days').textContent = days.toString().padStart(2, '0');
-        document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-        document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-        document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-      };
-      
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-
-      // 3D Tilt Effect
-      const tiltContainer = document.getElementById('tiltContainer');
-      
-      const handleTilt = (e) => {
-        const x = e.clientX / window.innerWidth;
-        const y = e.clientY / window.innerHeight;
-        
-        const tiltX = (y - 0.5) * 20;
-        const tiltY = (0.5 - x) * 20;
-        
-        tiltContainer.style.transform = `
-          translateY(0)
-          rotateX(${tiltX}deg)
-          rotateY(${tiltY}deg)
-        `;
-      };
-      
-      document.addEventListener('mousemove', handleTilt);
-
-      // Notify Button Effect
-      const notifyBtn = document.getElementById('notifyBtn');
-      
-      notifyBtn.addEventListener('click', () => {
-        // Ripple effect
-        const ripple = document.createElement('span');
-        ripple.classList.add('ripple-effect');
-        notifyBtn.appendChild(ripple);
-        
-        // Get click position
-        const rect = notifyBtn.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-        
-        // Set ripple position
-        ripple.style.left = `${x}px`;
-        ripple.style.top = `${y}px`;
-        
-        // Remove ripple after animation
-        setTimeout(() => {
-          ripple.remove();
-        }, 1000);
-        
-        // Show notification
-        const notification = document.createElement('div');
-        notification.classList.add('notification');
-        notification.innerHTML = `
-          <p>Você será notificado quando lançarmos!</p>
-        `;
-        document.body.appendChild(notification);
-        
-        setTimeout(() => {
-          notification.classList.add('show');
-        }, 10);
-        
-        setTimeout(() => {
-          notification.classList.remove('show');
-          setTimeout(() => {
-            notification.remove();
-          }, 300);
-        }, 3000);
-      });
-
-      // Dynamic glow intensity based on time
-      const updateGlow = () => {
-        const hours = new Date().getHours();
-        let intensity;
-        
-        if (hours > 20 || hours < 6) {
-          intensity = 0.8; // Night time - more intense
-        } else if (hours > 17 || hours < 9) {
-          intensity = 0.5; // Morning/evening - medium
-        } else {
-          intensity = 0.3; // Day time - less intense
-        }
-        
-        document.documentElement.style.setProperty('--glow-intensity', intensity);
-      };
-      
-      updateGlow();
-      setInterval(updateGlow, 60000);
-    });
-
-    // Service Worker for PWA capabilities
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').then(registration => {
-          console.log('ServiceWorker registration successful');
-        }).catch(err => {
-          console.log('ServiceWorker registration failed: ', err);
-        });
-      });
-    }
-
-    // WebGL check and fallback
-    try {
-      const canvas = document.createElement('canvas');
-      const gl = canvas.getContext('webgl2') || canvas.getContext('experimental-webgl2');
-      
-      if (!gl) {
-        document.documentElement.classList.add('no-webgl');
-      }
-    } catch (e) {
-      document.documentElement.classList.add('no-webgl');
-    }
-  </script>
-
-  <style>
-    /* Dynamic styles added by JS */
-    .ripple-effect {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 50%;
-      transform: scale(0);
-      animation: ripple 0.6s linear;
-      pointer-events: none;
-    }
-
-    @keyframes ripple {
-      to {
-        transform: scale(10);
-        opacity: 0;
-      }
-    }
-
-    .notification {
-      position: fixed;
-      bottom: -100px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 255, 170, 0.9);
-      color: var(--color-bg);
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      font-weight: 700;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      z-index: 1000;
-    }
-
-    .notification.show {
-      bottom: 30px;
-    }
-
-    /* Fallback for no WebGL */
-    .no-webgl .particles {
-      display: none;
-    }
-
-    .no-webgl .container {
-      background: rgba(10, 10, 26, 0.9);
-    }
-  </style>
+  <script src="/assets/js/main.js"></script>
 </body>
+
 </html>
